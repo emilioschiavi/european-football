@@ -17,5 +17,4 @@ At the moment there are no contributors beside myself.
 
 ## License
 
-Coming soon...
-
+This code can be used under MIT license.
