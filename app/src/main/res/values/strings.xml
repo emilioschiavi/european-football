@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EuropeanFootbal</string>
+    <string name="app_loading_page">Loading Page</string>
+    <string name="app_please_wait">Please wait...</string>
+    <string name="network_failure">Failure accessing the network</string>
+</resources>
