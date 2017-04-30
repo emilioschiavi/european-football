@@ -8,4 +8,24 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Listitem">
+        <item name="android:paddingLeft">@dimen/listitem_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/listitem_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/listitem_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/listitem_vertical_padding</item>
+        <item name="android:layout_marginLeft">@dimen/listitem_vertical_margin</item>
+        <item name="android:layout_marginRight">@dimen/listitem_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/listitem_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/listitem_vertical_margin</item>
+        <item name="android:background">@color/listitem_background</item>
+    </style>
+
+    <style name="Listitem.Competition" parent="Listitem">
+    </style>
+
+    <style name="TextItem">
+        <item name="android:textColor">@color/textitem_standard</item>
+        <item name="android:textSize">@dimen/textitem_standard</item>
+    </style>
+
 </resources>

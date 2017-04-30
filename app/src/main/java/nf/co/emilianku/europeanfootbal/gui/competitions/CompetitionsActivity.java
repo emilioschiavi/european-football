@@ -25,6 +25,7 @@ public class CompetitionsActivity extends BaseActivity implements CompetitionsVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(getString(R.string.available_competitions));
         Log.d(this.getClass().getName(), "onCreate");
         ((App) getApplication()).getObjectGraph().plus(new CompetitionsModule(this)).inject(this);
 

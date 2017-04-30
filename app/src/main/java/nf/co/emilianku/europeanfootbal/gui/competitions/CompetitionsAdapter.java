@@ -88,7 +88,7 @@ public class CompetitionsAdapter extends
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View contactView = inflater.inflate(R.layout.competition_row, parent, false);
+        View contactView = inflater.inflate(R.layout.listitem_competition, parent, false);
 
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(contactView);
