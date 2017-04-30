@@ -22,6 +22,7 @@ import nf.co.emilianku.domain.processors.CompetitionsProcessor;
 
 public class CompetitionsPresenter {
 
+    public static final String HTTP_API_FOOTBALL_DATA_ORG_V1_COMPETITIONS = "http://api.football-data.org/v1/competitions/";
     private final CompetitionsView view;
 
     @Inject DataProvider dataProvider;
@@ -73,7 +74,7 @@ public class CompetitionsPresenter {
 
     public void sendRequest() {
         Log.d(this.getClass().getName(), "sending request");
-        dataProvider.sendRequest("http://api.football-data.org/v1/competitions/",
+        dataProvider.sendRequest(HTTP_API_FOOTBALL_DATA_ORG_V1_COMPETITIONS,
                 new CompetitionsProcessor());
     }
 
