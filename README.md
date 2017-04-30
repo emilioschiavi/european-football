@@ -1,11 +1,12 @@
 ## European Football
 
 This is a small Android app that shows results and rankings of most european football championships.
-As soon as I have a very first working version it shall be pushed under GitHub.
+The following API is used: http://api.football-data.org.
 
-## Code Example
+## Status
 
-Coming soon...
+For the time being only getting the list of available competitions.
+There are also no styles now, not yet, only texts. I want to provide functionality first, then adjust the UI.
 
 ## Motivation
 
