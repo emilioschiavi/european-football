@@ -15,6 +15,7 @@ import nf.co.emilianku.domain.model.Competition;
 import nf.co.emilianku.europeanfootbal.App;
 import nf.co.emilianku.europeanfootbal.R;
 import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
+import nf.co.emilianku.europeanfootbal.gui.SimpleDividerItemDecoration;
 import nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity;
 
 import static nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity.EXTRA_COMPETITION_ID;
@@ -41,6 +42,8 @@ public class CompetitionsActivity extends BaseActivity implements CompetitionsVi
         rvCompetitions.setAdapter(adapter);
         // Set layout manager to position the items
         rvCompetitions.setLayoutManager(new LinearLayoutManager(this));
+        // Add divider decoration
+        rvCompetitions.addItemDecoration(new SimpleDividerItemDecoration(this));
 
         adapter.setOnItemClickListener(new CompetitionsAdapter.OnItemClickListener() {
             @Override

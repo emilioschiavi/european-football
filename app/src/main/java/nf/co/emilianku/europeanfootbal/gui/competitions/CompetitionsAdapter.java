@@ -98,6 +98,15 @@ public class CompetitionsAdapter extends
     // Involves populating data into the item through holder
     @Override
     public void onBindViewHolder(CompetitionsAdapter.ViewHolder viewHolder, int position) {
+
+        View view = viewHolder.itemView;
+        if (position % 2 == 0) {
+            view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_normal));
+        }
+        else {
+            view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_alternated));
+        }
+
         // Get the data model based on position
         CompetitionViewModel competitionViewModel = mCompetitionViewModels.get(position);
 
@@ -119,7 +128,6 @@ public class CompetitionsAdapter extends
 
     public void addCompetition(Competition competition) {
         mCompetitionViewModels.add(new CompetitionViewModel(competition));
-        ////notifyItemInserted(mCompetitionViewModels.size() - 1);
     }
 
     public void endPage() {

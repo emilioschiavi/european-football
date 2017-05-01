@@ -7,4 +7,7 @@
     <dimen name="listitem_vertical_margin">1dp</dimen>
     <dimen name="listitem_horizontal_margin">1dp</dimen>
     <dimen name="textitem_standard">20sp</dimen>
+    <dimen name="button_margin">4dp</dimen>
+    <dimen name="button_corner">4dp</dimen>
+    <dimen name="button_stroke">1dip</dimen>
 </resources>
