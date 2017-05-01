@@ -6,6 +6,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -36,7 +37,7 @@ public class CompetitionsPresenter {
         EventBus.getDefault().register(this);
 
         if (!dataProvider.isRunning()) {
-            List<Competition> competitions = dataProvider.dataContainer.getCompetitions();
+            Collection<Competition> competitions = dataProvider.dataContainer.getCompetitions();
             if (competitions.size() == 0) {
                 sendRequest();
             }
@@ -63,7 +64,7 @@ public class CompetitionsPresenter {
         view.showResponseFailure();
     }
 
-    private void createNewPage(List<Competition> competitions) {
+    private void createNewPage(Collection<Competition> competitions) {
         view.beginPage();
         for (Competition competition : competitions) {
             view.addRow(competition);

@@ -5,7 +5,7 @@ The following API is used: http://api.football-data.org.
 
 ## Status
 
-For the time being only getting the list of available competitions.
+For the time being only getting the list of available competitions and some basic competition data.
 The UI is far from being perfect...styles shall be added.
 
 ## Motivation

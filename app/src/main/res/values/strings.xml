@@ -4,4 +4,13 @@
     <string name="app_please_wait">Please wait...</string>
     <string name="network_failure">Failure accessing the network</string>
     <string name="available_competitions">Available Competitions</string>
+    <string name="current_competition">Current Competition</string>
+    <string name="current_matchday">Current Matchday</string>
+    <string name="number_of_matchdays">Number of Matchdays</string>
+    <string name="number_of_teams">Number of Teams</string>
+    <string name="number_of_games">Number of Games</string>
+    <string name="teams">Teams</string>
+    <string name="league_table">League Table</string>
+    <string name="results">Results</string>
+    <string name="not_implemented">Not implemented</string>
 </resources>

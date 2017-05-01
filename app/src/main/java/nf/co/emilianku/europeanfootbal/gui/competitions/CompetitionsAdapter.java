@@ -125,4 +125,9 @@ public class CompetitionsAdapter extends
     public void endPage() {
         notifyDataSetChanged();
     }
+
+    public CompetitionViewModel getItem(int position) {
+        assert 0 <= position && position < mCompetitionViewModels.size();
+        return mCompetitionViewModels.get(position);
+    }
 }

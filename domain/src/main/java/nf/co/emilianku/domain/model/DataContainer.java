@@ -1,6 +1,8 @@
 package nf.co.emilianku.domain.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -9,18 +11,22 @@ import java.util.List;
 
 public class DataContainer {
 
-    private List<Competition> competitions;
+    HashMap<Integer, Competition> competitions;
 
     public DataContainer() {
-        competitions = new ArrayList<>();
+        competitions = new HashMap<>();
     }
 
-    public List<Competition> getCompetitions() {
-        return competitions;
+    public Collection<Competition> getCompetitions() {
+        return competitions.values();
     }
 
     public void addCompetition(Competition competition) {
-        competitions.add(competition);
+        competitions.put(competition.getId(), competition);
+    }
+
+    public Competition getCompetition(int id) {
+        return competitions.get(id);
     }
 
     public void clearCompetitions() {

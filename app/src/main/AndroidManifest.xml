@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".gui.leaguetable.LeagueTableActivity" />
-        <activity android:name=".gui.fixtures.FixturesActivity"></activity>
+        <activity android:name=".gui.fixtures.FixturesActivity" />
+        <activity android:name=".gui.competition.CompetitionActivity"></activity>
     </application>
 
 </manifest>

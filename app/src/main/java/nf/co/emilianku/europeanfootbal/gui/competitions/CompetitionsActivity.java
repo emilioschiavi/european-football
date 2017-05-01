@@ -1,5 +1,6 @@
 package nf.co.emilianku.europeanfootbal.gui.competitions;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,9 @@ import nf.co.emilianku.domain.model.Competition;
 import nf.co.emilianku.europeanfootbal.App;
 import nf.co.emilianku.europeanfootbal.R;
 import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
+import nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity;
+
+import static nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity.EXTRA_COMPETITION_ID;
 
 public class CompetitionsActivity extends BaseActivity implements CompetitionsView {
 
@@ -42,10 +46,17 @@ public class CompetitionsActivity extends BaseActivity implements CompetitionsVi
             @Override
             public void onItemClick(View view, int position) {
                 Log.d(this.getClass().getName(), "selected position: " + position);
+                int requestedId = adapter.getItem(position).getId();
+                startCompetitionActivity(requestedId);
             }
         });
     }
 
+    private void startCompetitionActivity(int requestedId) {
+        Intent intent = new Intent(this, CompetitionActivity.class);
+        intent.putExtra(EXTRA_COMPETITION_ID, requestedId);
+        startActivity(intent);
+    }
 
     @Override
     protected int getLayoutResourceId() {

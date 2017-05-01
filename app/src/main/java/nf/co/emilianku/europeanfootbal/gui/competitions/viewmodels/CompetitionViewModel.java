@@ -14,6 +14,10 @@ public class CompetitionViewModel {
         this.competition = competition;
     }
 
+    public int getId() {
+        return competition.getId();
+    }
+
     public String getCaption() {
         return competition.getCaption();
     }
