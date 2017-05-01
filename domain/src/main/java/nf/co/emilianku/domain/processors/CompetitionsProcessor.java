@@ -24,7 +24,16 @@ public class CompetitionsProcessor implements ResponseProcessor{
                 JSONArray array = new JSONArray(responseBody);
                 for (int i = 0; i < array.length(); i++) {
                     JSONObject row = array.getJSONObject(i);
-                    container.addCompetition(new Competition(row.getString("caption")));
+                    container.addCompetition(new Competition(
+                            row.getJSONObject("_links").getJSONObject("teams").getString("href"),
+                            row.getJSONObject("_links").getJSONObject("fixtures").getString("href"),
+                            row.getJSONObject("_links").getJSONObject("leagueTable").getString("href"),
+                            row.getInt("id"),
+                            row.getString("caption"),
+                            row.getInt("currentMatchday"),
+                            row.getInt("numberOfMatchdays"),
+                            row.getInt("numberOfTeams"),
+                            row.getInt("numberOfGames")));
                 }
 
                 return true;
