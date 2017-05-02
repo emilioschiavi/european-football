@@ -8,5 +8,5 @@ import nf.co.emilianku.domain.model.DataContainer;
 
 public interface ResponseProcessor {
 
-    boolean process(DataContainer container, String responseBody);
+    boolean process(DataContainer container, String url, String responseBody);
 }

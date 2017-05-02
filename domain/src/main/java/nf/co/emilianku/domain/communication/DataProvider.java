@@ -32,13 +32,13 @@ public class DataProvider {
     }
 
     public void sendRequest(String url, final ResponseProcessor processor) {
-        AsyncTask<String, Integer, String> task = new AsyncTask<String, Integer, String>() {
+        AsyncTask<String, Integer, String[]> task = new AsyncTask<String, Integer, String[]>() {
 
             @Override
-            protected void onPostExecute(String responseBody) {
-                super.onPostExecute(responseBody);
+            protected void onPostExecute(String[] args) {
+                super.onPostExecute(args);
                 running = false;
-                boolean result = processor.process(dataContainer, responseBody);
+                boolean result = processor.process(dataContainer, args[0], args[1]);
                 if (result) {
                     EventBus.getDefault().post(new HttpResponseOk());
                 }
@@ -48,7 +48,7 @@ public class DataProvider {
             }
 
             @Override
-            protected String doInBackground(String... params) {
+            protected String[] doInBackground(String... params) {
                 return getResponse(params[0]);
             }
         };
@@ -57,14 +57,14 @@ public class DataProvider {
         task.execute(url);
     }
 
-    private String getResponse(String url) {
+    private String[] getResponse(String url) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
-            return response.body().string();
+            return new String[] {url, response.body().string()};
         }
         catch(Exception exception) {
             return null;

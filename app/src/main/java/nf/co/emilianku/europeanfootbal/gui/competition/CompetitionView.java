@@ -19,4 +19,6 @@ public interface CompetitionView {
     void showNumberOfTeams(int numberOfTeams);
 
     void showNumberOfGames(int numberOfGames);
+
+    void navigateTo(String url);
 }

@@ -31,4 +31,10 @@ public class CompetitionPresenter {
         view.showNumberOfMatchdays(competition.getNumberOfMatchdays());
         view.showNumberOfTeams(competition.getNumberOfTeams());
     }
+
+    public void goToLeagueTable(int requestedId) {
+        Competition competition = dataProvider.dataContainer.getCompetition(requestedId);
+        assert competition != null;
+        view.navigateTo(competition.getUrlLeagueTable());
+    }
 }

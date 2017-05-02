@@ -11,10 +11,13 @@ import java.util.List;
 
 public class DataContainer {
 
-    HashMap<Integer, Competition> competitions;
+    private HashMap<Integer, Competition> competitions;
+
+    private HashMap<String, List<LeagueTableEntry>> leagueTables;
 
     public DataContainer() {
         competitions = new HashMap<>();
+        leagueTables = new HashMap<>();
     }
 
     public Collection<Competition> getCompetitions() {
@@ -31,5 +34,17 @@ public class DataContainer {
 
     public void clearCompetitions() {
         competitions.clear();
+    }
+
+    public List<LeagueTableEntry> getLeagueTable(String url) {
+        if (leagueTables.get(url) == null) {
+            leagueTables.put(url, new ArrayList<LeagueTableEntry>());
+        }
+
+        return leagueTables.get(url);
+    }
+
+    public void addLeagueTableEntry(String url, LeagueTableEntry entry) {
+        getLeagueTable(url).add(entry);
     }
 }

@@ -17,7 +17,7 @@ import nf.co.emilianku.domain.model.DataContainer;
 public class CompetitionsProcessor implements ResponseProcessor{
 
     @Override
-    public boolean process(DataContainer container, String responseBody) {
+    public boolean process(DataContainer container, String url, String responseBody) {
         container.clearCompetitions();
         if (responseBody != null) {
             try {

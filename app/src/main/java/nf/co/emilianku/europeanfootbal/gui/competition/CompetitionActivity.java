@@ -11,10 +11,12 @@ import javax.inject.Inject;
 import nf.co.emilianku.europeanfootbal.App;
 import nf.co.emilianku.europeanfootbal.R;
 import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
+import nf.co.emilianku.europeanfootbal.gui.leaguetable.LeagueTableActivity;
 
 public class CompetitionActivity extends BaseActivity implements CompetitionView {
 
     public final static String EXTRA_COMPETITION_ID = "EXTRA_COMPETITION_ID";
+    public static final String EXTRA_URL = "EXTRA_URL";
 
     @Inject
     CompetitionPresenter presenter;
@@ -66,12 +68,22 @@ public class CompetitionActivity extends BaseActivity implements CompetitionView
         ((TextView)findViewById(R.id.tvNumberOfGames)).setText(String.valueOf(numberOfGames));
     }
 
+    @Override
+    public void navigateTo(String url) {
+        Intent intent = new Intent(this, LeagueTableActivity.class);
+        intent.putExtra(EXTRA_URL, url);
+        startActivity(intent);
+    }
+
     public void goToTeams(View view) {
         Toast.makeText(this, R.string.not_implemented, Toast.LENGTH_SHORT).show();
     }
 
     public void goToLeagueTable(View view) {
-        Toast.makeText(this, R.string.not_implemented, Toast.LENGTH_SHORT).show();
+        Intent intent = getIntent();
+        assert intent.hasExtra(EXTRA_COMPETITION_ID);
+        int requestedId = intent.getIntExtra(EXTRA_COMPETITION_ID, 0);
+        presenter.goToLeagueTable(requestedId);
     }
 
     public void goToResults(View view) {
