@@ -15,7 +15,6 @@ public class LeagueTableProcessor implements ResponseProcessor{
 
     @Override
     public boolean process(DataContainer container, String url, String responseBody) {
-        container.clearCompetitions();
         if (responseBody != null) {
             try {
                 JSONObject obj = new JSONObject(responseBody);

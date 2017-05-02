@@ -7,7 +7,7 @@ The following API is used: http://api.football-data.org.
 
 For the time being only getting the list of available competitions and some basic competition data.
 The UI is far from being perfect...styles shall be added.
-Ranking list added -> some crash must be fixed...
+Ranking list added -> fixed some bug...
 Not all competitions provide the ranking list in the same format, for example the Champions League.
 In this case nothing is shown, just an error message.
 
