@@ -10,6 +10,7 @@ The UI is far from being perfect...styles shall be added.
 Ranking list added -> fixed some bug...
 Not all competitions provide the ranking list in the same format, for example the Champions League.
 In this case nothing is shown, just an error message.
+Added flags to the teams in the ranking list.
 
 ## Motivation
 

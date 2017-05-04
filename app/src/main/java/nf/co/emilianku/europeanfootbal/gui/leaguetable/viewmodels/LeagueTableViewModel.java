@@ -21,4 +21,8 @@ public class LeagueTableViewModel {
     public int getPoints() {
         return leagueTableEntry.getPoints();
     }
+
+    public String getCrestURI() {
+        return leagueTableEntry.getCrestURI();
+    }
 }

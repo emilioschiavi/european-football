@@ -10,9 +10,13 @@ public class LeagueTableEntry {
 
     private final int points;
 
-    public LeagueTableEntry(String teamName, int points) {
+    private final String crestURI;
+
+    public LeagueTableEntry(String teamName, int points, String crestURI) {
+
         this.teamName = teamName;
         this.points = points;
+        this.crestURI = crestURI;
     }
 
     public String getTeamName() {
@@ -21,5 +25,9 @@ public class LeagueTableEntry {
 
     public int getPoints() {
         return points;
+    }
+
+    public String getCrestURI() {
+        return crestURI;
     }
 }
