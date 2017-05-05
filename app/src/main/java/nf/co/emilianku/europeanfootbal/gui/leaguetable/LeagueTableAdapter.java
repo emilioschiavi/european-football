@@ -108,10 +108,12 @@ public class LeagueTableAdapter extends
 
         View view = viewHolder.itemView;
         if (position % 2 == 0) {
-            view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_normal));
+            //view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_normal));
+            view.setBackground(getContext().getResources().getDrawable(R.drawable.list_item_normal_gradient));
         }
         else {
-            view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_alternated));
+            //view.setBackgroundColor(getContext().getResources().getColor(R.color.color_listitem_background_alternated));
+            view.setBackground(getContext().getResources().getDrawable(R.drawable.list_item_alternate_gradient));
         }
 
         // Get the data model based on position

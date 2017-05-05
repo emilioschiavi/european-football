@@ -18,6 +18,7 @@ import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
 import nf.co.emilianku.europeanfootbal.gui.SimpleDividerItemDecoration;
 import nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity;
 
+import static android.content.Intent.EXTRA_TITLE;
 import static nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity.EXTRA_COMPETITION_ID;
 
 public class CompetitionsActivity extends BaseActivity implements CompetitionsView {
@@ -49,15 +50,16 @@ public class CompetitionsActivity extends BaseActivity implements CompetitionsVi
             @Override
             public void onItemClick(View view, int position) {
                 Log.d(this.getClass().getName(), "selected position: " + position);
-                int requestedId = adapter.getItem(position).getId();
-                startCompetitionActivity(requestedId);
+                startCompetitionActivity(adapter.getItem(position).getId(),
+                        adapter.getItem(position).getCaption());
             }
         });
     }
 
-    private void startCompetitionActivity(int requestedId) {
+    private void startCompetitionActivity(int requestedId, String caption) {
         Intent intent = new Intent(this, CompetitionActivity.class);
         intent.putExtra(EXTRA_COMPETITION_ID, requestedId);
+        intent.putExtra(EXTRA_TITLE, caption);
         startActivity(intent);
     }
 

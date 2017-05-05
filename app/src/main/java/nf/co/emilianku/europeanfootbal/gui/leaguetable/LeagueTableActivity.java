@@ -15,6 +15,7 @@ import nf.co.emilianku.europeanfootbal.R;
 import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
 import nf.co.emilianku.europeanfootbal.gui.SimpleDividerItemDecoration;
 
+import static android.content.Intent.EXTRA_TITLE;
 import static nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity.EXTRA_COMPETITION_ID;
 import static nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity.EXTRA_URL;
 
@@ -28,7 +29,6 @@ public class LeagueTableActivity extends BaseActivity implements LeagueTableView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(getString(R.string.league_table));
         ((App) getApplication()).getObjectGraph().plus(new LeagueTableModule(this)).inject(this);
 
         // Lookup the recyclerview in activity layout
@@ -65,6 +65,8 @@ public class LeagueTableActivity extends BaseActivity implements LeagueTableView
         Log.d(this.getClass().getName(), "onStart");
         Intent intent = getIntent();
         assert intent.hasExtra(EXTRA_URL);
+        assert intent.hasExtra(EXTRA_TITLE);
+        setTitle(intent.getStringExtra(EXTRA_TITLE));
         String url = intent.getStringExtra(EXTRA_URL);
         presenter.onStart(url);
     }

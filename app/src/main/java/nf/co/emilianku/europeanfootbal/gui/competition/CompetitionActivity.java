@@ -13,6 +13,8 @@ import nf.co.emilianku.europeanfootbal.R;
 import nf.co.emilianku.europeanfootbal.gui.BaseActivity;
 import nf.co.emilianku.europeanfootbal.gui.leaguetable.LeagueTableActivity;
 
+import static android.content.Intent.EXTRA_TITLE;
+
 public class CompetitionActivity extends BaseActivity implements CompetitionView {
 
     public final static String EXTRA_COMPETITION_ID = "EXTRA_COMPETITION_ID";
@@ -24,11 +26,12 @@ public class CompetitionActivity extends BaseActivity implements CompetitionView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(getString(R.string.current_competition));
         ((App) getApplication()).getObjectGraph().plus(new CompetitionModule(this)).inject(this);
 
         Intent intent = getIntent();
         assert intent.hasExtra(EXTRA_COMPETITION_ID);
+        assert intent.hasExtra(EXTRA_TITLE);
+        setTitle(intent.getStringExtra(EXTRA_TITLE));
         int requestedId = intent.getIntExtra(EXTRA_COMPETITION_ID, 0);
         presenter.createData(requestedId);
     }
@@ -72,6 +75,7 @@ public class CompetitionActivity extends BaseActivity implements CompetitionView
     public void navigateTo(String url) {
         Intent intent = new Intent(this, LeagueTableActivity.class);
         intent.putExtra(EXTRA_URL, url);
+        intent.putExtra(EXTRA_TITLE, getTitle());
         startActivity(intent);
     }
 
