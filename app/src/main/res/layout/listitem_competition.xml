@@ -6,11 +6,15 @@
     android:layout_height="wrap_content"
     style="@style/ListItem">
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/flag_height"/>
+
     <TextView
         android:id="@+id/tvCaption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Some caption..."
-        style="@style/TextItem.Caption"/>
+        style="@style/TextItem.Caption.Competition"/>
 
 </LinearLayout>

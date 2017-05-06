@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Page">
+        <item name="android:background">@drawable/page_gradient</item>
+    </style>
+
     <style name="ListItem">
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingLeft">@dimen/listitem_horizontal_padding</item>
@@ -18,7 +22,7 @@
         <item name="android:layout_marginRight">@dimen/listitem_vertical_margin</item>
         <item name="android:layout_marginTop">@dimen/listitem_vertical_margin</item>
         <item name="android:layout_marginBottom">@dimen/listitem_vertical_margin</item>
-        <item name="android:gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical|left</item>
     </style>
 
     <style name="ListItem.Competition" parent="ListItem">
@@ -32,15 +36,25 @@
         <item name="android:textColor">@color/color_textitem_caption</item>
     </style>
 
+    <style name="TextItem.Caption.Competition" parent = "TextItem.Caption">
+        <item name="android:textColor">@color/color_textitem_caption</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+    </style>
+
     <style name="TextItem.Value" parent = "TextItem">
         <item name="android:textColor">@color/color_textitem_value</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Button">
+    <style name="Button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/button_gradient</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
         <item name="android:textColor">@color/color_button_text_normal</item>
+        <item name="android:textSize">@dimen/textitem_standard</item>
         <item name="android:layout_margin">@dimen/button_margin</item>
+        <item name="android:paddingLeft">@dimen/button_padding</item>
+        <item name="android:paddingRight">@dimen/button_padding</item>
+        <item name="android:gravity">center_vertical|left</item>
     </style>
 
     <style name="AppImage">

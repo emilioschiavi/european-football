@@ -1,203 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_competition"
+    android:layout_height="match_parent"
+    style="@style/Page"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity">
+        android:layout_height="wrap_content">
 
-        <TableRow
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_competition"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/table_padding"
+            tools:context="nf.co.emilianku.europeanfootbal.gui.competition.CompetitionActivity">
 
-            <TextView
-                android:id="@+id/tvCompetitionCaption"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Caption"
-                android:text="Selected competition"
-                android:layout_column="0" />
+                android:layout_height="wrap_content">
 
-        </TableRow>
+                <TextView
+                    android:id="@+id/tvCompetitionCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Caption"
+                    android:textStyle="bold"
+                    android:text="Selected competition"
+                    android:layout_column="0" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            </TableRow>
 
-            <View
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="wrap_content">
 
-        </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            </TableRow>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="0.66"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Caption"
-                android:text="@string/current_matchday"
-                android:layout_column="0" />
-
-            <TextView
-                android:id="@+id/tvCurrentMatchday"
-                android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Value"
-                android:text="7"
-                android:layout_column="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="0.66"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Caption"
-                android:text="@string/number_of_matchdays"
-                android:layout_column="0" />
-
-            <TextView
-                android:id="@+id/tvNumberOfMatchdays"
-                android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Value"
-                android:text="46"
-                android:layout_column="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="0.66"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Caption"
-                android:text="@string/number_of_teams"
-                android:layout_column="0" />
-
-            <TextView
-                android:id="@+id/tvNumberOfTeams"
-                android:layout_width="0dp"
-                android:layout_weight="0.33"
-                style="@style/TextItem.Value"
-                android:layout_height="wrap_content"
-                android:text="24"
-                android:layout_column="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="0.66"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Caption"
-                android:text="@string/number_of_games"
-                android:layout_column="0" />
-
-            <TextView
-                android:id="@+id/tvNumberOfGames"
-                android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
-                style="@style/TextItem.Value"
-                android:text="24"
-                android:layout_column="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <View
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="wrap_content">
 
-        </TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.66"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Caption"
+                    android:text="@string/current_matchday"
+                    android:layout_column="0" />
 
-        <TableRow
+                <TextView
+                    android:id="@+id/tvCurrentMatchday"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Value"
+                    android:text="7"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.66"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Caption"
+                    android:text="@string/number_of_matchdays"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:id="@+id/tvNumberOfMatchdays"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Value"
+                    android:text="46"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.66"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Caption"
+                    android:text="@string/number_of_teams"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:id="@+id/tvNumberOfTeams"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    style="@style/TextItem.Value"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.66"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Caption"
+                    android:text="@string/number_of_games"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:id="@+id/tvNumberOfGames"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    style="@style/TextItem.Value"
+                    android:text="24"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_column="0" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/teams"
-                android:layout_column="1"
-                style="@style/Button"
-                android:onClick="goToTeams"/>
-
-        </TableRow>
-
-        <TableRow
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="@string/teams"
+            style="@style/Button"
+            android:onClick="goToTeams"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_column="0" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/league_table"
-                android:layout_column="1"
-                style="@style/Button"
-                android:onClick="goToLeagueTable"/>
-
-        </TableRow>
-
-        <TableRow
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="@string/league_table"
+            style="@style/Button"
+            android:onClick="goToLeagueTable"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_column="0" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/results"
+            style="@style/Button"
+            android:onClick="goToResults"/>
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/results"
-                android:layout_column="1"
-                style="@style/Button"
-                android:onClick="goToResults"/>
+    </LinearLayout>
 
-        </TableRow>
-
-    </TableLayout>
 </ScrollView>
