@@ -14,11 +14,7 @@ Added flags to the teams in the ranking list.
 
 ## Some Screenshots
 
-<img alt="Sample Competitions List" src="https://cloud.githubusercontent.com/assets/18901734/25775269/93753d3e-32a1-11e7-87ec-3e957e7c7bd5.png" width="25%" height="25%" />
-
-<img alt="Sample Competition Data" src="https://cloud.githubusercontent.com/assets/18901734/25775270/94e51f36-32a1-11e7-89bb-114586293ecd.png" width="25%" height="25%" />
-
-<img alt="Sample Ranking List" src="https://cloud.githubusercontent.com/assets/18901734/25773567/9bd8b270-327f-11e7-8a8c-d97f8f3dcc46.png" width="25%" height="25%" />
+<img alt="Sample Competitions List" src="https://cloud.githubusercontent.com/assets/18901734/25775269/93753d3e-32a1-11e7-87ec-3e957e7c7bd5.png" width="25%" height="25%" /> <img alt="Sample Competition Data" src="https://cloud.githubusercontent.com/assets/18901734/25775270/94e51f36-32a1-11e7-89bb-114586293ecd.png" width="25%" height="25%" /> <img alt="Sample Ranking List" src="https://cloud.githubusercontent.com/assets/18901734/25773567/9bd8b270-327f-11e7-8a8c-d97f8f3dcc46.png" width="25%" height="25%" />
 
 ## Motivation
 
