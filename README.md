@@ -14,7 +14,7 @@ Added flags to the teams in the ranking list.
 
 ## Some Screenshots
 
-![Alt Ranking List](https://cloud.githubusercontent.com/assets/18901734/25764341/9e366cbc-31e7-11e7-938f-d6cef4017129.png "Sample Ranking List")
+<img alt="Sample Ranking List" src="https://cloud.githubusercontent.com/assets/18901734/25764341/9e366cbc-31e7-11e7-938f-d6cef4017129.png" width="50%" height="50%" />
 
 ## Motivation
 
