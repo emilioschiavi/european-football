@@ -22,6 +22,7 @@ public class LeagueTableProcessor implements ResponseProcessor{
                 for (int i = 0; i < array.length(); i++) {
                     JSONObject row = array.getJSONObject(i);
                     container.addLeagueTableEntry(url, new LeagueTableEntry(
+                            row.getInt("position"),
                             row.getString("teamName"),
                             row.getInt("points"),
                             row.getString("crestURI")));

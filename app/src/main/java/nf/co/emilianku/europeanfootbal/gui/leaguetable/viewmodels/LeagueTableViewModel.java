@@ -14,6 +14,10 @@ public class LeagueTableViewModel {
         this.leagueTableEntry = leagueTableEntry;
     }
 
+    public String getPosition() {
+        return String.valueOf(leagueTableEntry.getPosition()) + ".";
+    }
+
     public String getTeamName() {
         return leagueTableEntry.getTeamName();
     }

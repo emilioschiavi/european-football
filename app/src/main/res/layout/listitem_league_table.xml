@@ -5,6 +5,14 @@
     android:layout_height="wrap_content"
     style="@style/ListItem">
 
+    <TextView
+        android:id="@+id/tvPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/caption_margin_left"
+        android:text="1."
+        style="@style/TextItem.Caption"/>
+
     <ImageView
         android:id="@+id/ivFlag"
         style="@style/AppImage.Flag"/>

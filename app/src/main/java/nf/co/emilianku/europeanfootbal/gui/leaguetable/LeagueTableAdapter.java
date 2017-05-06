@@ -41,6 +41,7 @@ public class LeagueTableAdapter extends
 
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
+        public TextView tvPosition;
         public TextView tvTeamName;
         public TextView tvPoints;
         public ImageView tvFlag;
@@ -51,6 +52,7 @@ public class LeagueTableAdapter extends
             // Stores the itemView in a public final member variable that can be used
             // to access the context from any ViewHolder instance.
             super(itemView);
+            tvPosition = (TextView) itemView.findViewById(R.id.tvPosition);
             tvTeamName = (TextView) itemView.findViewById(R.id.tvTeamName);
             tvPoints = (TextView) itemView.findViewById(R.id.tvPoints);
             tvFlag = (ImageView) itemView.findViewById(R.id.ivFlag);
@@ -120,9 +122,11 @@ public class LeagueTableAdapter extends
         LeagueTableViewModel leagueTableViewModel = leagueTableViewModelList.get(position);
 
         // Set item views based on your views and data model
+        TextView textView = viewHolder.tvPosition;
+        textView.setText(leagueTableViewModel.getPosition());
         ImageView imageView = viewHolder.tvFlag;
         ((BaseActivity)getContext()).loadImageIntoView(leagueTableViewModel.getCrestURI(), imageView);
-        TextView textView = viewHolder.tvTeamName;
+        textView = viewHolder.tvTeamName;
         textView.setText(leagueTableViewModel.getTeamName());
         textView = viewHolder.tvPoints;
         textView.setText(String.valueOf(leagueTableViewModel.getPoints()));

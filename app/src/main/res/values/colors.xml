@@ -3,8 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="color_textitem_caption">#444444</color>
-    <color name="color_textitem_value">#444444</color>
+    <color name="color_textitem_caption">#222222</color>
+    <color name="color_textitem_value">#222222</color>
     <color name="color_listitem_background_normal">#FFFFFF</color>
     <color name="color_listitem_background_alternated">#F2F2F2</color>
     <color name="color_listitem_divider">#E5E5E5</color>
